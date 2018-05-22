@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.Bus">
+   <center>
+      <AnchorPane prefHeight="296.0" prefWidth="434.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="370.0" fitWidth="434.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Desktop/744081-background-wallpaper.jpg" />
+               </image>
+            </ImageView>
+            <TextArea editable="false" layoutX="6.0" layoutY="6.0" prefHeight="21.0" prefWidth="423.0" text="                         Assigning Bus Routes">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#0eebd3" />
+                     </light>
+                  </Lighting>
+               </effect>
+            </TextArea>
+            <Label layoutX="14.0" layoutY="69.0" prefHeight="33.0" prefWidth="122.0" text="Departure Time">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="departureInfo" layoutX="143.0" layoutY="73.0" promptText="09:00-AM ,09:00-PM" />
+            <Label layoutX="14.0" layoutY="115.0" prefHeight="37.0" prefWidth="105.0" text="Route Id">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="routeId" layoutX="143.0" layoutY="121.0" />
+            <Button layoutX="143.0" layoutY="177.0" mnemonicParsing="false" onAction="#assignRoute" prefHeight="25.0" prefWidth="122.0" text="Submit">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="RED" />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Button>
+            <Label fx:id="routeAssigned" layoutX="143.0" layoutY="256.0" prefHeight="33.0" prefWidth="234.0" textFill="#320303">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Button layoutX="23.0" layoutY="276.0" mnemonicParsing="false" onAction="#previousMenu" text="previous" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.LoginPageController">
+   <center>
+      <AnchorPane prefHeight="300.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Desktop/images.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="18.0" layoutY="80.0" prefHeight="43.0" prefWidth="100.0" text="User Name" textFill="#2f0009">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="135.0" prefHeight="43.0" prefWidth="100.0" text="Password" textFill="#510b0b">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextArea editable="false" prefHeight="68.0" prefWidth="300.0" text="         Manager Login" wrapText="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#d00d99" />
+                     </light>
+                  </Lighting>
+               </effect>
+            </TextArea>
+            <TextField fx:id="userName" layoutX="118.0" layoutY="89.0" prefHeight="27.0" prefWidth="149.0" />
+            <TextField fx:id="password" layoutX="118.0" layoutY="139.0" prefHeight="30.0" prefWidth="149.0" />
+            <Button layoutX="99.0" layoutY="193.0" mnemonicParsing="false" onAction="#checkLogin" prefHeight="25.0" prefWidth="94.0" text="Submit">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label fx:id="loggedIn" layoutX="17.0" layoutY="242.0" prefHeight="43.0" prefWidth="151.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="next" disable="true" layoutX="221.0" layoutY="251.0" mnemonicParsing="false" onAction="#nextMenu" prefHeight="36.0" prefWidth="62.0" text="Next" visible="false" />
+            <Button layoutX="18.0" layoutY="193.0" mnemonicParsing="false" onAction="#previousMenu" prefHeight="39.0" prefWidth="66.0" text="prev" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

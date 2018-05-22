@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.Receptionist">
+   <center>
+      <AnchorPane prefHeight="275.0" prefWidth="508.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="326.0" fitWidth="516.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Desktop/recept.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="149.0" layoutY="14.0" prefHeight="15.0" prefWidth="359.0" text="Assigning Receptionist">
+               <font>
+                  <Font name="System Bold Italic" size="29.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="75.0" prefHeight="31.0" prefWidth="151.0" text="Receptionist Name">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="receptName" layoutX="179.0" layoutY="75.0" prefHeight="25.0" prefWidth="185.0" />
+            <Label layoutX="14.0" layoutY="121.0" prefHeight="17.0" prefWidth="146.0" text="Assign Password">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="receptPass" layoutX="179.0" layoutY="122.0" prefHeight="25.0" prefWidth="185.0" />
+            <Label layoutX="14.0" layoutY="166.0" prefHeight="26.0" prefWidth="146.0" text="Terminal Location">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tLocation" layoutX="179.0" layoutY="167.0" prefHeight="25.0" prefWidth="185.0" />
+            <Button layoutX="232.0" layoutY="214.0" mnemonicParsing="false" onAction="#assignReceptionist" text="register">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="14.0" layoutY="278.0" mnemonicParsing="false" onAction="#prevMenu" text="previous" />
+            <Label fx:id="employeeAdded" layoutX="150.0" layoutY="273.0" prefHeight="35.0" prefWidth="287.0" textFill="#484a20">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

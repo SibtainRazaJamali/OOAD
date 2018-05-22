@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+  
+ <hibernate-mapping>  
+  <class name="application.view.Bus" table="Bus">  
+    <id name="busId"
+    column="busid" 
+    unsaved-value="0"
+    >  
+     <generator class="native"></generator>  
+    </id>  
+            
+    
+    
+    <property name="departureTime"></property>
+    <list name="seats" table="seats">  
+     <key column="busId"></key>  
+     <index column="seat"></index>  
+     <element column="seatId" type="int"></element>  
+   </list> 
+    <many-to-one name="route" class="application.view.Route"
+            column="routeid" unique="true" not-null="true"
+            cascade="merge" />      
+  </class>  
+            
+ </hibernate-mapping> 

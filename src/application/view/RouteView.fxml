@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.Route">
+   <center>
+      <AnchorPane prefHeight="242.0" prefWidth="308.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="261.0" fitWidth="355.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Desktop/light-green-circles-backgrounds-powerpoint.jpg" />
+               </image>
+            </ImageView>
+            <TextFlow prefHeight="75.0" prefWidth="348.0">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <children>
+                  <TextArea editable="false" prefHeight="53.0" prefWidth="349.0" text="     Adding New Route" wrapText="true">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant color="#c8ed13" />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </TextArea>
+               </children>
+            </TextFlow>
+            <TextField fx:id="sourceCity" layoutX="136.0" layoutY="95.0" prefHeight="25.0" prefWidth="163.0" />
+            <Label layoutX="3.0" layoutY="90.0" prefHeight="35.0" prefWidth="118.0" text="Source">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="3.0" layoutY="131.0" prefHeight="35.0" prefWidth="130.0" text="Destination">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="destinationCity" layoutX="136.0" layoutY="136.0" prefHeight="25.0" prefWidth="163.0" />
+            <Label fx:id="routeAdded" layoutX="99.0" layoutY="217.0" prefHeight="36.0" prefWidth="221.0" textFill="#063283">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="278.0" layoutY="180.0" mnemonicParsing="false" onAction="#makeRoute" text="submit">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button layoutX="14.0" layoutY="217.0" mnemonicParsing="false" onAction="#previousMenu" text="previous">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="8.0" layoutY="177.0" text="Fare(Rs)">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fareCost" layoutX="139.0" layoutY="180.0" prefHeight="25.0" prefWidth="79.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

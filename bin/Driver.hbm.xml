@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+  
+ <hibernate-mapping>  
+  <class name="application.view.Driver" table="Driver">  
+    <id name="dId"
+    column="dId" 
+    unsaved-value="0"
+    >  
+     <generator class="native"></generator>  
+    </id>  
+            
+    
+    
+    <property name="name"></property>
+    
+    <many-to-one name="assignedBus" class="application.view.Bus"
+            column="routeid" unique="true" not-null="true"
+            cascade="merge" />      
+  </class>  
+            
+ </hibernate-mapping> 

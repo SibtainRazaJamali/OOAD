@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.Bus">
+   <center>
+      <AnchorPane prefHeight="271.0" prefWidth="613.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="435.0" fitWidth="690.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Desktop/1968081.jpg" />
+               </image>
+            </ImageView>
+            <TextArea editable="false" layoutX="-2.0" layoutY="19.0" prefHeight="70.0" prefWidth="690.0" text="                                 Available Buses">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#f0ee02" />
+                     </light>
+                  </Lighting>
+               </effect>
+            </TextArea>
+            <Button layoutX="25.0" layoutY="172.0" mnemonicParsing="false" onAction="#previousMenu" prefHeight="36.0" prefWidth="71.0" text="previous" textFill="#2d6feb">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="20.0" layoutY="283.0" mnemonicParsing="false" onAction="#viewBuses" prefHeight="25.0" prefWidth="81.0" text="Get List" textFill="#6106ff">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <HBox layoutX="114.0" layoutY="107.0" prefHeight="32.0" prefWidth="571.0">
+               <children>
+                  <Label prefHeight="28.0" prefWidth="76.0" text="Bus Id" textFill="WHITE">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="32.0" prefWidth="142.0" text="Depart.Time" textFill="WHITE">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="32.0" prefWidth="156.0" text="Departure" textFill="WHITE">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="32.0" prefWidth="156.0" text="Arrival" textFill="WHITE">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="32.0" prefWidth="66.0" text="Fare" textFill="WHITE">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <TextArea fx:id="showlist" layoutX="110.0" layoutY="137.0" prefHeight="286.0" prefWidth="579.0">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#8c008a" />
+                     </light>
+                  </Lighting>
+               </effect>
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </TextArea>
+            <Separator layoutX="114.0" layoutY="138.0" prefHeight="0.0" prefWidth="568.0" />
+            <Separator layoutX="110.0" layoutY="106.0" prefHeight="3.0" prefWidth="573.0" />
+            <Separator layoutX="179.0" layoutY="108.0" orientation="VERTICAL" prefHeight="309.0" prefWidth="3.0" />
+            <Separator layoutX="454.0" layoutY="108.0" orientation="VERTICAL" prefHeight="309.0" prefWidth="19.0" />
+            <Separator layoutX="307.0" layoutY="108.0" orientation="VERTICAL" prefHeight="310.0" prefWidth="9.0" />
+            <Separator layoutX="600.0" layoutY="108.0" orientation="VERTICAL" prefHeight="308.0" prefWidth="29.0" />
+            <Separator layoutX="109.0" layoutY="412.0" prefHeight="11.0" prefWidth="575.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

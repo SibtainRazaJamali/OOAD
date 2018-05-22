@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="442.0" prefWidth="406.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.Manager">
+   <center>
+      <AnchorPane prefHeight="442.0" prefWidth="460.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="442.0" fitWidth="446.0" layoutX="-1.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Desktop/images.jpg" />
+               </image>
+            </ImageView>
+            <TextArea editable="false" layoutX="-2.0" layoutY="-2.0" pickOnBounds="false" prefHeight="100.0" prefWidth="450.0" text="                Managers Menu">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#9b96b9" />
+                     </light>
+                  </Lighting>
+               </effect>
+            </TextArea>
+            <VBox layoutX="101.0" layoutY="137.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#newRoute" prefHeight="25.0" prefWidth="231.0" text="Add a New Route" />
+                  <Button mnemonicParsing="false" onAction="#viewBuses" prefHeight="25.0" prefWidth="234.0" text="View Buses" />
+                  <Button mnemonicParsing="false" onAction="#addReceptionist" prefHeight="25.0" prefWidth="235.0" text="Assign Receptionist To Terminal" />
+                  <Button mnemonicParsing="false" onAction="#assignDriverToBus" prefHeight="25.0" prefWidth="233.0" text="Assign Driver To Bus" />
+                  <Button mnemonicParsing="false" onAction="#assignBusRoute" prefHeight="25.0" prefWidth="233.0" text="Assign Bus A Route" />
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="234.0" text="View Drivers" />
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="235.0" text="View Receptionists" />
+                  <Button mnemonicParsing="false" onAction="#viewRoutes" prefHeight="25.0" prefWidth="236.0" text="View Routes" />
+               </children>
+            </VBox>
+            <Button layoutX="14.0" layoutY="403.0" mnemonicParsing="false" onAction="#prevMenu" text="previous" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
